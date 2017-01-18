@@ -9,22 +9,17 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var cursos_service_1 = require('./cursos.service');
-var CursosComponent = (function () {
-    function CursosComponent(cursosService) {
-        this.nomePortal = 'tiago.traning';
-        this.cursos = cursosService.getCursos();
+var CursosService = (function () {
+    function CursosService() {
     }
-    CursosComponent = __decorate([
-        core_1.Component({
-            moduleId: module.id,
-            selector: 'cursos-lista',
-            templateUrl: 'cursos.component.html',
-            providers: [cursos_service_1.CursosService]
-        }), 
-        __metadata('design:paramtypes', [cursos_service_1.CursosService])
-    ], CursosComponent);
-    return CursosComponent;
+    CursosService.prototype.getCursos = function () {
+        return ['Angular 2', 'Java', 'Ext JS', 'Teste'];
+    };
+    CursosService = __decorate([
+        core_1.Injectable(), 
+        __metadata('design:paramtypes', [])
+    ], CursosService);
+    return CursosService;
 }());
-exports.CursosComponent = CursosComponent;
-//# sourceMappingURL=cursos.component.js.map
+exports.CursosService = CursosService;
+//# sourceMappingURL=cursos.service.js.map
