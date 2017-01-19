@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
 	selector: 'exemplo-data-binding',
 	templateUrl: 'data-binding.component.html'
 })
-export class DataBindingComponent implements OnInit {
+export class DataBindingComponent {
 	constructor() {}
 
 	url = 'http://www.google.com';
