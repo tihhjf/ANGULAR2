@@ -10,14 +10,17 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var data_binding_component_1 = require('./data-binding/data-binding.component');
+var life_cycle_component_1 = require('./ciclo/life-cycle.component');
 var AppComponent = (function () {
     function AppComponent() {
+        this.deletarConteudo = false;
+        this.valorInicial = 15;
     }
     AppComponent = __decorate([
         core_1.Component({
             selector: 'my-app',
-            template: "\n        <h1>Angular 2 Boilerplate</h1>\n        <p>Hello World!</p>\n        <exemplo-data-binding></exemplo-data-binding>\n    ",
-            directives: [data_binding_component_1.DataBindingComponent]
+            template: "\n        <!--h1>Angular 2 Boilerplate</h1-->\n        <!--p>Hello World!</p-->\n        <!--exemplo-data-binding></exemplo-data-binding-->\n        <lifecycle [valorInicial]=\"valorInicial\" *ngIf=\"deletarConteudo != true\"></lifecycle>\n        <button (click)=\"valorInicial = 20\">Mudar o valor</button>\n        <button (click)=\"deletarConteudo = true\">Deletar</button>\n    ",
+            directives: [data_binding_component_1.DataBindingComponent, life_cycle_component_1.LifeCycleComponent]
         }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);
