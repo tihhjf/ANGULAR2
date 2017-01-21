@@ -14,6 +14,7 @@ var LifeCycleComponent = (function () {
         this.valorInicial = 10;
     }
     LifeCycleComponent.prototype.ngOnInit = function () {
+        console.log(this.variavelLocalP);
     };
     LifeCycleComponent.prototype.ngOnChanges = function () {
     };
@@ -33,11 +34,15 @@ var LifeCycleComponent = (function () {
         core_1.Input(), 
         __metadata('design:type', Object)
     ], LifeCycleComponent.prototype, "valorInicial", void 0);
+    __decorate([
+        core_1.ViewChild('variavelLocalP'), 
+        __metadata('design:type', HTMLElement)
+    ], LifeCycleComponent.prototype, "variavelLocalP", void 0);
     LifeCycleComponent = __decorate([
         core_1.Component({
             moduleId: module.id,
             selector: 'lifecycle',
-            template: "\n\t\t<p>{{ valorInicial }}</p>\n\t"
+            template: "\n\t\t<p #variavelLocalP>{{ valorInicial }}</p>\n\t\t<p>{{variavelLocalP.textContent}}</p>\n\t"
         }), 
         __metadata('design:paramtypes', [])
     ], LifeCycleComponent);
